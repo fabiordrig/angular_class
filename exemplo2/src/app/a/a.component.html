@@ -1,0 +1,17 @@
+<div>
+  <label>nome:</label>
+  <input [(ngModel)]="cliente.nome">
+</div>
+<div>
+  <label>idade:</label>
+  <input [(ngModel)]="cliente.idade">
+</div>
+<div>
+  <button (click)="add()">ok</button>
+</div>
+<ul>
+  <li *ngFor="let item of clientes">
+    {{ item.nome }} - {{ item.idade }}
+  </li>
+  
+</ul>
