@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Cliente} from '../cliente/cliente';
+import { ServicoService } from '../servico/servico.service';
 
 @Component({
   selector: 'app-form',
@@ -9,12 +10,12 @@ import {Cliente} from '../cliente/cliente';
 export class FormComponent  {
   private  cliente: Cliente = {nome: null, idade: null};
   
-  constructor() { }
+  constructor(private servico: ServicoService) { }
 
-  ngOnInit () {}
+  ngOnInit () {  }
 
   add():void {
-
+    this.servico.add(this.cliente)
   }
 
 
