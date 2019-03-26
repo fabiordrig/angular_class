@@ -8,8 +8,14 @@ import {Cliente} from '../cliente/cliente';
 })
 export class FormComponent  {
   private  cliente: Cliente = {nome: null, idade: null};
+  
   constructor() { }
 
+  ngOnInit () {}
+
+  add():void {
+
+  }
 
 
 }
